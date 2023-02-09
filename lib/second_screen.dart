@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class MySecondScreen extends StatelessWidget {
   final String month;
   const MySecondScreen(this.month, {super.key});
@@ -10,7 +11,20 @@ class MySecondScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text(title),
       ),
-      body: Text('You selected $month'),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: Container(
+                decoration: const BoxDecoration(color: Colors.teal),
+                child: Text(
+                  'You selected $month',
+                  textScaleFactor: 3,
+                )),
+          ),
+        ],
+      ),
     );
   }
 }
